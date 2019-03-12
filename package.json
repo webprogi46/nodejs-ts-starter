@@ -1,0 +1,27 @@
+{
+  "name": "nodejs-ts-starter",
+  "version": "1.0.0",
+  "description": "NodeJS Server + TypeScript + Express + Nodemon + TSLint ",
+  "main": "index.js",
+  "scripts": {
+    "lint": "tslint -c tslint.json \"src/**/*.ts\"",
+    "build": "yarn run lint && echo Using TypeScript && tsc --version && tsc --pretty -p .",
+    "start": "node lib/server.js",
+    "start:watch": "nodemon --watch lib lib/server.js",
+    "watch": "yarn run build -- --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stefan Strasser",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^1.18.10",
+    "tslint": "^5.13.1"
+  },
+  "dependencies": {
+    "@types/cors": "^2.8.4",
+    "@types/express": "^4.16.1",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "typescript": "^3.3.3333"
+  }
+}
